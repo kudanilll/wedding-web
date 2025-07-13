@@ -7,7 +7,7 @@ export default function TimelineSection() {
     // Jakarta time offset in milliseconds (UTC+7)
     const jakartaOffset = 7 * 60 * 60 * 1000;
     const targetDate =
-      new Date("October 13, 2024 00:00:00").getTime() + jakartaOffset;
+      new Date("October 13, 2025 00:00:00").getTime() + jakartaOffset;
     const currentDate = new Date().getTime();
     const difference = targetDate - currentDate;
 
@@ -50,10 +50,12 @@ export default function TimelineSection() {
 
   const data = [
     {
-      title: "Jumat, 23 Agustus 2024",
+      title: "Jumat, 23 Agustus 2025",
       content: (
         <div>
-          <h1 className="text-white text-2xl font-bold mb-2">Akad Nikah</h1>
+          <h1 className="text-neutral-200 text-2xl font-bold mb-2">
+            Akad Nikah
+          </h1>
           <p className="text-neutral-500 text-base mb-8">
             Jl. Beringin, Padang Tiakar Hilir, Kec. Payakumbuh Timur., Kota
             Payakumbuh, Sumatera Barat
@@ -62,10 +64,12 @@ export default function TimelineSection() {
       ),
     },
     {
-      title: "Senin, 26 Agustus 2024",
+      title: "Senin, 26 Agustus 2025",
       content: (
         <div>
-          <h1 className="text-white text-2xl font-bold mb-2">Acara Resepsi</h1>
+          <h1 className="text-neutral-200 text-2xl font-bold mb-2">
+            Acara Resepsi
+          </h1>
           <p className="text-neutral-500 text-base mb-8">
             Jl.Prof M.Yamin, Padang Tiakar Hilir, Kec. Payakumbuh Timur., Kota
             Payakumbuh, Sumatera Barat
@@ -74,10 +78,12 @@ export default function TimelineSection() {
       ),
     },
     {
-      title: "Minggu, 13 Oktober 2024",
+      title: "Minggu, 13 Oktober 2025",
       content: (
         <div>
-          <h1 className="text-white text-2xl font-bold mb-2">Ngunduh Mantu</h1>
+          <h1 className="text-neutral-200 text-2xl font-bold mb-2">
+            Ngunduh Mantu
+          </h1>
           <p className="text-neutral-500 text-base mb-8">
             Perumahan Green Bekasi Village, Jl. Rw. Mulya No.6-7, RT.009/RW.003,
             Mustika Jaya, Kec. Mustika Jaya, Kota Bks, Jawa Barat 17158
@@ -113,7 +119,7 @@ export default function TimelineSection() {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full py-12">
       <Timeline data={data} />
     </div>
   );

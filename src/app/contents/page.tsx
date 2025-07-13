@@ -1,12 +1,14 @@
 "use client";
+
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { HeroParallax } from "@/sections/hero-parallax";
 import Bride from "@/sections/bride";
 import TimelineSection from "@/sections/timeline-section";
 import SurahCard from "@/components/surah";
 import GiveAWish from "@/sections/give-a-wish";
 import Gallery from "@/sections/gallery";
+import Location from "@/sections/location";
+import Hero from "@/sections/hero";
 
 export default function Page() {
   const router = useRouter();
@@ -44,28 +46,14 @@ export default function Page() {
   }, [router, searchParams]);
 
   return (
-    <div>
-      <section id="section1" className="h-[250vh]">
-        <HeroParallax images={images} name={name} />
-      </section>
-      <section id="section2" className="h-dvh">
-        <Bride />
-      </section>
-      <section id="section3" className="h-dvh">
-        <SurahCard />
-      </section>
-      <section id="section4" className="h-[150dvh]">
-        <Gallery />
-      </section>
-      <section id="section5" className="h-[155dvh]">
-        <TimelineSection />
-      </section>
-      <section id="section6" className="h-dvh">
-        {/* MAPS */}
-      </section>
-      <section id="section7" className="h-dvh">
-        <GiveAWish />
-      </section>
+    <div className="min-h-dvh w-screen">
+      <Hero name={name} />
+      <Bride />
+      <SurahCard />
+      <Gallery />
+      <TimelineSection />
+      <Location />
+      <GiveAWish />
       <div>
         <audio ref={audioRef} loop preload="auto">
           <source src="/assets/song.mp3" type="audio/mpeg" />
@@ -73,8 +61,9 @@ export default function Page() {
         </audio>
         <button
           onClick={toggleMusic}
-          className="fixed bottom-4 right-4 bg-zinc-800 text-neutral-200 p-4 rounded-full shadow-lg"
-          style={{ zIndex: 1000 }}>
+          className="fixed bottom-4 right-4 bg-zinc-800 text-neutral-200 p-4 rounded-3xl shadow-lg"
+          style={{ zIndex: 1000 }}
+        >
           {isPlaying ? (
             // Pause icon
             <svg
@@ -83,7 +72,8 @@ export default function Page() {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              strokeWidth={2}>
+              strokeWidth={2}
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -98,7 +88,8 @@ export default function Page() {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              strokeWidth={2}>
+              strokeWidth={2}
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"

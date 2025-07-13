@@ -20,11 +20,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scroll-smooth no-scrollbar"
+      className="scroll-smooth no-scrollbar antialiased bg-black"
       suppressHydrationWarning
-      style={{ scrollBehavior: "smooth" }}>
-      <body className={font.className}>
-        <main className="antialiased bg-black">{children}</main>
+      style={{ scrollBehavior: "smooth" }}
+    >
+      <body className={`${font.className} min-h-dvh`}>
+        <main>{children}</main>
       </body>
     </html>
   );

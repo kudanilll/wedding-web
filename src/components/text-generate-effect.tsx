@@ -40,7 +40,8 @@ export const TextGenerateEffect = ({
               className="text-neutral-400 opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",
-              }}>
+              }}
+            >
               {word}{" "}
             </motion.span>
           );
@@ -52,7 +53,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("text-center", className)}>
       <div className="mt-4">
-        <div className="text-neutral-400 text-base leading-snug tracking-wide">
+        <div className="text-neutral-400 text-base md:text-2xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

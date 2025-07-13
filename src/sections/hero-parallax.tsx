@@ -16,9 +16,9 @@ export function HeroParallax({
   images: string[];
   name: string;
 }) {
-  const firstRow = images.slice(0, 5);
-  const secondRow = images.slice(5, 10);
-  const thirdRow = images.slice(10, 15);
+  const firstRow = images.slice(0, 6);
+  const secondRow = images.slice(5, 11);
+  const thirdRow = images.slice(9, 15);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -54,7 +54,8 @@ export function HeroParallax({
   return (
     <div
       ref={ref}
-      className="h-[250vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="h-[250vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+    >
       <Header name={name} />
       <motion.div
         style={{
@@ -62,7 +63,8 @@ export function HeroParallax({
           rotateZ,
           translateY,
           opacity,
-        }}>
+        }}
+      >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-6 mb-6">
           {firstRow.map((image) => (
             <Card image={image} translate={translateX} key={image} />
@@ -91,35 +93,40 @@ export function Header({ name }: { name: string }) {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="z-10 text-neutral-200 relative mx-auto py-10 px-2 w-full left-0 top-0">
+      className="z-10 text-neutral-200 relative mx-auto py-10 px-2 w-full left-0 top-0"
+    >
       <div className="relative flex flex-col items-center justify-center">
         <div className="p-4">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="pt-12 text-xl text-center">
+            className="pt-12 text-xl text-center"
+          >
             Selamat Datang, {name}
           </motion.h1>
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="text-xl text-center">
+            className="text-xl text-center"
+          >
             Dalam Acara
           </motion.h1>
           <motion.h1
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="text-center text-4xl font-semibold mt-4 mb-6 px-2">
+            className="text-center text-4xl font-semibold mt-4 mb-6 px-2"
+          >
             Ngunduh Mantu
           </motion.h1>
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="relative flex flex-col justify-center items-center">
+            className="relative flex flex-col justify-center items-center"
+          >
             <Image
               src="/assets/hero.png"
               alt="Nanda & Shofi"
@@ -139,14 +146,16 @@ export function Header({ name }: { name: string }) {
                 backgroundColor: isHovered
                   ? "rgba(255, 255, 255, 0.1)"
                   : "transparent",
-              }}>
+              }}
+            >
               13 Oktober 2024
             </motion.button>
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
-              className="relative z-10 text-xl mb-4 bg-clip-text text-center text-neutral-300">
+              className="relative z-10 text-xl mb-4 bg-clip-text text-center text-neutral-300"
+            >
               Pukul 09.00 WIB s/d Selesai
             </motion.h1>
           </div>
@@ -169,7 +178,8 @@ export const Card = ({
         x: translate,
       }}
       key={image}
-      className="group/product h-72 w-[24rem] relative flex-shrink-0">
+      className="group/product h-72 w-[24rem] relative flex-shrink-0"
+    >
       <div className="block">
         <Image
           src={image}
