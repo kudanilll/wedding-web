@@ -9,7 +9,7 @@ const font = Afacad({
 
 export const metadata: Metadata = {
   title: "Shofi & Nanda | Undangan Pernikahan",
-  description: "",
+  description: "Undangan Pernikahan Shofi & Nanda",
 };
 
 export default function RootLayout({

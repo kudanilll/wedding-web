@@ -102,26 +102,3 @@ export default function Page() {
     </div>
   );
 }
-
-export const images = [
-  // jogja
-  "/assets/images/1e383acf-2063-420b-bcd6-c67736e762a5.jpg",
-  "/assets/images/3239e0f9-d89e-4591-9273-15a8fd04468d.jpg",
-  "/assets/images/e500502c-212d-4dee-a110-ae0761e7ca70.jpg",
-  "/assets/images/1e383acf-2063-420b-bcd6-c67736e762a5.jpg",
-  "/assets/images/3239e0f9-d89e-4591-9273-15a8fd04468d.jpg",
-
-  // sumbar
-  "/assets/images/51133b7c-b8ba-4968-a244-c8cd82fd4c81.jpg",
-  "/assets/images/4593d154-65f9-46b3-bad7-ccf0c6860c24.jpg",
-  "/assets/images/f569f30e-e834-44e4-bb6d-ee0a54afd89a.jpg",
-  "/assets/images/51133b7c-b8ba-4968-a244-c8cd82fd4c81.jpg",
-  "/assets/images/4593d154-65f9-46b3-bad7-ccf0c6860c24.jpg",
-
-  // dll
-  "/assets/images/DSCF0340.jpeg",
-  "/assets/images/DSCF0711.jpeg",
-  "/assets/images/DSCF0751.jpeg",
-  "/assets/images/DSCF0340.jpeg",
-  "/assets/images/DSCF0711.jpeg",
-];
